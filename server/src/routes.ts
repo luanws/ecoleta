@@ -9,7 +9,9 @@ const itemsController = new ItemsController()
 routes.get('/', (request, response) => response.send('ECOLETA'))
 
 routes.get('/items', itemsController.index)
-routes.post('/points', pointsController.create)
+
+routes.get('/points', pointsController.index)
 routes.get('/points/:id', pointsController.show)
+routes.post('/points', pointsController.create)
 
 export default routes
