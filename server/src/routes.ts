@@ -10,5 +10,6 @@ routes.get('/', (request, response) => response.send('ECOLETA'))
 
 routes.get('/items', itemsController.index)
 routes.post('/points', pointsController.create)
+routes.get('/points/:id', pointsController.show)
 
 export default routes
