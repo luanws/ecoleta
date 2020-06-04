@@ -4,10 +4,17 @@ import {
 } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { Feather as Icon } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
 
 const Home = () => {
+    const navigation = useNavigation()
+
+    function handleNavigateToPoints() {
+        navigation.navigate('Points')
+    }
+
     return (
         <ImageBackground
             source={require('../../assets/home-background.png')}
@@ -23,7 +30,7 @@ const Home = () => {
             </View>
 
             <View style={styles.footer}>
-                <RectButton style={styles.button}>
+                <RectButton style={styles.button} onPress={handleNavigateToPoints}>
                     <View style={styles.buttonIcon}>
                         <Icon name="arrow-right" color="#fff" size={24}></Icon>
                     </View>
