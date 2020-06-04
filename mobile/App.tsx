@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, StatusBar } from 'react-native';
 import { AppLoading } from 'expo'
 
-import Home from './src/pages/Home/Home'
+import Routes from './src/routes'
 
 import { Roboto_400Regular, Roboto_500Medium } from '@expo-google-fonts/roboto'
 import { Ubuntu_700Bold, useFonts } from '@expo-google-fonts/ubuntu'
@@ -21,7 +21,7 @@ export default function App() {
     return (
         <>
             <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
-            <Home></Home>
+            <Routes />
         </>
     );
 }
