@@ -104,7 +104,7 @@ const Points = () => {
                     <MapView
                         style={styles.map}
                         loadingEnabled={initialPosition[0] === 0}
-                        initialRegion={{
+                        region={{
                             latitude: initialPosition[0],
                             longitude: initialPosition[1],
                             latitudeDelta: 0.014,
