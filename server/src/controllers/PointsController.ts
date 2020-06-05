@@ -42,6 +42,7 @@ class PointsController {
             .select('items.title')
 
         point.items = items
+        point.image_url = `http://192.168.100.88:5000/uploads/${point.image}`
 
         return response.json(point)
     }
